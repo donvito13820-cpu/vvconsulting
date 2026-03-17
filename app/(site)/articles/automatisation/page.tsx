@@ -90,7 +90,7 @@ export default function ArticleAutomatisation() {
           }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.15) 100%)" }} />
 
-          <div className="animate-slideUp" style={{ position: "relative", zIndex: 2, maxWidth: "1400px", width: "100%", margin: "0 auto", padding: "0 40px 80px" }}>
+          <div className="animate-slideUp site-container" style={{ position: "relative", zIndex: 2, width: "100%", paddingBottom: "80px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
               <span style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)" }}>
                 Transformation
@@ -112,8 +112,7 @@ export default function ArticleAutomatisation() {
           ref={(el) => { sectionRefs.current["intro"] = el; }}
           style={{ backgroundColor: "#ffffff", padding: "80px 0" }}
         >
-          <div style={{
-            maxWidth: "720px", margin: "0 auto", padding: "0 40px",
+          <div className="sp-narrow" style={{
             opacity: isVisible("intro") ? 1 : 0,
             transform: isVisible("intro") ? "translateY(0)" : "translateY(30px)",
             transition: "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
@@ -136,7 +135,7 @@ export default function ArticleAutomatisation() {
           ref={(el) => { sectionRefs.current["stats"] = el; }}
           style={{ backgroundColor: "#09090b", padding: "80px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "#52525b", marginBottom: "16px", textAlign: "center" }}>
               Pourquoi vos concurrents prennent de l'avance
             </p>
@@ -144,8 +143,8 @@ export default function ArticleAutomatisation() {
               Les chiffres parlent d'eux-mêmes
             </h2>
 
-            <div style={{
-              display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", backgroundColor: "#27272a",
+            <div className="sp-grid-3" style={{
+              gap: "1px", backgroundColor: "#27272a",
               opacity: isVisible("stats") ? 1 : 0,
               transform: isVisible("stats") ? "translateY(0)" : "translateY(20px)",
               transition: "all 0.8s ease 0.2s",
@@ -183,7 +182,7 @@ export default function ArticleAutomatisation() {
           ref={(el) => { sectionRefs.current["pertes"] = el; }}
           style={{ backgroundColor: "#fafafa", padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <div style={{ textAlign: "center", marginBottom: "64px" }}>
               <h2 style={{ fontSize: "30px", fontWeight: 300, color: "#18181b", marginBottom: "12px" }}>
                 Où se cachent vos pertes invisibles ?
@@ -191,7 +190,7 @@ export default function ArticleAutomatisation() {
               <div style={{ width: "60px", height: "2px", backgroundColor: "#18181b", margin: "0 auto" }} />
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "32px" }}>
+            <div className="sp-grid-3" style={{ gap: "32px" }}>
               {pertes.map((item, i) => (
                 <div
                   key={i}
@@ -248,7 +247,7 @@ export default function ArticleAutomatisation() {
           ref={(el) => { sectionRefs.current["avantages"] = el; }}
           style={{ backgroundColor: "#ffffff", padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "720px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="sp-narrow">
             <h2 style={{
               fontSize: "28px", fontWeight: 300, color: "#18181b", marginBottom: "48px",
               opacity: isVisible("avantages") ? 1 : 0,
@@ -305,8 +304,8 @@ export default function ArticleAutomatisation() {
           ref={(el) => { sectionRefs.current["role"] = el; }}
           style={{ backgroundColor: "#18181b", padding: "80px 0" }}
         >
-          <div style={{
-            maxWidth: "720px", margin: "0 auto", padding: "0 40px", textAlign: "center",
+          <div className="sp-narrow" style={{
+            textAlign: "center",
             opacity: isVisible("role") ? 1 : 0,
             transform: isVisible("role") ? "translateY(0)" : "translateY(20px)",
             transition: "all 0.8s ease",
@@ -345,14 +344,14 @@ export default function ArticleAutomatisation() {
 
         {/* CTA */}
         <section style={{ backgroundColor: "#fafafa", padding: "80px 0" }}>
-          <div style={{ maxWidth: "720px", margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
+          <div className="sp-narrow" style={{ textAlign: "center" }}>
             <h2 style={{ fontSize: "26px", fontWeight: 300, color: "#18181b", marginBottom: "24px" }}>
               Prêt à automatiser votre croissance ?
             </h2>
             <p style={{ fontSize: "15px", lineHeight: 1.7, color: "#71717a", marginBottom: "40px" }}>
               Discutons de vos processus et identifions ensemble les leviers d'optimisation les plus impactants.
             </p>
-            <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
+            <div className="sp-cta-row">
               <Link
                 href="/contact"
                 className="btn-hover"

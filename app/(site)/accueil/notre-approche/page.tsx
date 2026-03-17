@@ -74,11 +74,11 @@ export default function NotreApprochePage() {
           >
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6))" }} />
             <div style={{ position: "relative", height: "100%", display: "flex", alignItems: "flex-end", paddingBottom: "60px" }}>
-              <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px", width: "100%" }}>
+              <div className="site-container" style={{ width: "100%" }}>
                 <p className="animate-slideUp" style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", marginBottom: "16px" }}>
                   Notre structure
                 </p>
-                <h1 className="animate-slideUp" style={{ fontSize: "48px", fontWeight: 300, color: "#ffffff", maxWidth: "700px", lineHeight: 1.2, animationDelay: "0.1s" }}>
+                <h1 className="animate-slideUp sp-hero-title" style={{ fontSize: "48px", fontWeight: 300, color: "#ffffff", maxWidth: "700px", lineHeight: 1.2, animationDelay: "0.1s" }}>
                   Notre approche
                 </h1>
               </div>
@@ -92,8 +92,8 @@ export default function NotreApprochePage() {
           ref={(el) => { sectionRefs.current["philosophy"] = el; }}
           style={{ padding: "100px 0", borderBottom: "1px solid #f4f4f5" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: "80px", alignItems: "center" }}>
+          <div className="site-container">
+            <div className="sp-grid-asym" style={{ gap: "80px", alignItems: "center" }}>
               <div style={{ opacity: isVisible("philosophy") ? 1 : 0, transform: isVisible("philosophy") ? "translateX(0)" : "translateX(80px)", transition: "opacity 0.8s ease, transform 0.8s ease" }}>
                 <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#a1a1aa", marginBottom: "24px" }}>
                   Philosophie
@@ -123,7 +123,7 @@ export default function NotreApprochePage() {
           ref={(el) => { sectionRefs.current["process"] = el; }}
           style={{ backgroundColor: "#fafafa", padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <div style={{ textAlign: "center", marginBottom: "64px" }}>
               <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "#a1a1aa", marginBottom: "16px" }}>
                 Méthodologie
@@ -131,7 +131,7 @@ export default function NotreApprochePage() {
               <h2 style={{ fontSize: "32px", fontWeight: 300, color: "#18181b" }}>Notre processus</h2>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0" }}>
+            <div className="sp-grid-4" style={{ gap: "0" }}>
               {processSteps.map((step, i) => (
                 <div
                   key={i}
@@ -205,7 +205,7 @@ export default function NotreApprochePage() {
           ref={(el) => { sectionRefs.current["engagements"] = el; }}
           style={{ padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <div style={{ textAlign: "center", marginBottom: "64px" }}>
               <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "#a1a1aa", marginBottom: "16px" }}>
                 Garanties
@@ -213,7 +213,7 @@ export default function NotreApprochePage() {
               <h2 style={{ fontSize: "32px", fontWeight: 300, color: "#18181b" }}>Nos engagements</h2>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
+            <div className="sp-grid-3" style={{ gap: "24px" }}>
               {engagements.map((engagement, i) => (
                 <div
                   key={i}
@@ -274,8 +274,8 @@ export default function NotreApprochePage() {
           ref={(el) => { sectionRefs.current["principles"] = el; }}
           style={{ backgroundColor: "#18181b", padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
+          <div className="site-container">
+            <div className="sp-grid-2" style={{ gap: "80px", alignItems: "center" }}>
               <div style={{ opacity: isVisible("principles") ? 1 : 0, transform: isVisible("principles") ? "translateX(0)" : "translateX(80px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}>
                 <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "#52525b", marginBottom: "24px" }}>
                   Principes directeurs
@@ -329,14 +329,14 @@ export default function NotreApprochePage() {
 
         {/* CTA */}
         <section style={{ backgroundColor: "#ffffff", padding: "100px 0" }}>
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
-            <h2 style={{ fontSize: "36px", fontWeight: 300, color: "#18181b", marginBottom: "24px" }}>
+          <div className="site-container" style={{ textAlign: "center" }}>
+            <h2 className="sp-cta-title" style={{ fontSize: "36px", fontWeight: 300, color: "#18181b", marginBottom: "24px" }}>
               Découvrez notre méthodologie en action
             </h2>
             <p style={{ fontSize: "16px", color: "#71717a", maxWidth: "500px", margin: "0 auto 40px", lineHeight: 1.7 }}>
               Discutons de vos enjeux et de la manière dont nous pouvons vous accompagner.
             </p>
-            <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+            <div className="sp-cta-row">
               <Link
                 href="/contact"
                 className="btn-hover"

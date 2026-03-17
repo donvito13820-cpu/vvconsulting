@@ -65,11 +65,11 @@ export default function EnqueteQualitativePage() {
           >
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6))" }} />
             <div style={{ position: "relative", height: "100%", display: "flex", alignItems: "flex-end", paddingBottom: "60px" }}>
-              <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px", width: "100%" }}>
+              <div className="site-container" style={{ width: "100%" }}>
                 <p className="animate-slideUp" style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", marginBottom: "16px" }}>
                   Nos prestations
                 </p>
-                <h1 className="animate-slideUp" style={{ fontSize: "48px", fontWeight: 300, color: "#ffffff", maxWidth: "700px", lineHeight: 1.2, animationDelay: "0.1s" }}>
+                <h1 className="animate-slideUp sp-hero-title" style={{ fontSize: "48px", fontWeight: 300, color: "#ffffff", maxWidth: "700px", lineHeight: 1.2, animationDelay: "0.1s" }}>
                   Enquête qualitative
                 </h1>
               </div>
@@ -83,7 +83,7 @@ export default function EnqueteQualitativePage() {
           ref={(el) => { sectionRefs.current["intro"] = el; }}
           style={{ padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <div style={{ maxWidth: "800px", opacity: isVisible("intro") ? 1 : 0, transform: isVisible("intro") ? "translateX(0)" : "translateX(80px)", transition: "opacity 0.8s ease, transform 0.6s ease" }}>
               <h2 style={{ fontSize: "28px", fontWeight: 300, color: "#18181b", lineHeight: 1.4, marginBottom: "24px" }}>
                 Comprendre le "pourquoi" derrière les comportements
@@ -103,7 +103,7 @@ export default function EnqueteQualitativePage() {
           ref={(el) => { sectionRefs.current["methods"] = el; }}
           style={{ backgroundColor: "#18181b", padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <div style={{ marginBottom: "64px" }}>
               <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "#52525b", marginBottom: "16px" }}>
                 Méthodes
@@ -111,7 +111,7 @@ export default function EnqueteQualitativePage() {
               <h2 style={{ fontSize: "32px", fontWeight: 300, color: "#ffffff" }}>Nos approches qualitatives</h2>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "24px" }}>
+            <div className="sp-grid-4" style={{ gap: "24px" }}>
               {methods.map((method, i) => (
                 <div
                   key={i}
@@ -164,8 +164,8 @@ export default function EnqueteQualitativePage() {
           ref={(el) => { sectionRefs.current["process"] = el; }}
           style={{ padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px" }}>
+          <div className="site-container">
+            <div className="sp-grid-2" style={{ gap: "80px" }}>
               <div style={{ opacity: isVisible("process") ? 1 : 0, transform: isVisible("process") ? "translateX(0)" : "translateX(80px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}>
                 <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "#a1a1aa", marginBottom: "16px" }}>
                   Processus
@@ -239,8 +239,8 @@ export default function EnqueteQualitativePage() {
 
         {/* CTA */}
         <section style={{ backgroundColor: "#18181b", padding: "100px 0" }}>
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
-            <h2 style={{ fontSize: "36px", fontWeight: 300, color: "#ffffff", marginBottom: "24px" }}>
+          <div className="site-container" style={{ textAlign: "center" }}>
+            <h2 className="sp-cta-title" style={{ fontSize: "36px", fontWeight: 300, color: "#ffffff", marginBottom: "24px" }}>
               Explorez les perceptions de vos cibles
             </h2>
             <p style={{ fontSize: "16px", color: "#a1a1aa", maxWidth: "500px", margin: "0 auto 40px", lineHeight: 1.7 }}>

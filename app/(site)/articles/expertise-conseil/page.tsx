@@ -85,7 +85,7 @@ export default function ArticleExpertiseConseil() {
           }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.15) 100%)" }} />
 
-          <div className="animate-slideUp" style={{ position: "relative", zIndex: 2, maxWidth: "1400px", width: "100%", margin: "0 auto", padding: "0 40px 80px" }}>
+          <div className="animate-slideUp site-container" style={{ position: "relative", zIndex: 2, width: "100%", paddingBottom: "80px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
               <span style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)" }}>
                 Stratégie
@@ -107,8 +107,7 @@ export default function ArticleExpertiseConseil() {
           ref={(el) => { sectionRefs.current["intro-conseil"] = el; }}
           style={{ backgroundColor: "#ffffff", padding: "80px 0" }}
         >
-          <div style={{
-            maxWidth: "720px", margin: "0 auto", padding: "0 40px",
+          <div className="sp-narrow" style={{
             opacity: isVisible("intro-conseil") ? 1 : 0,
             transform: isVisible("intro-conseil") ? "translateY(0)" : "translateY(30px)",
             transition: "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
@@ -130,7 +129,7 @@ export default function ArticleExpertiseConseil() {
           ref={(el) => { sectionRefs.current["calcul"] = el; }}
           style={{ backgroundColor: "#09090b", padding: "80px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "#52525b", marginBottom: "16px", textAlign: "center" }}>
               Un calcul simple
             </p>
@@ -138,8 +137,8 @@ export default function ArticleExpertiseConseil() {
               Comparaison des coûts
             </h2>
 
-            <div style={{
-              display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: "0", alignItems: "stretch",
+            <div className="sp-grid-compare" style={{
+              gap: "0", alignItems: "stretch",
               opacity: isVisible("calcul") ? 1 : 0,
               transform: isVisible("calcul") ? "translateY(0)" : "translateY(20px)",
               transition: "all 0.8s ease 0.2s",
@@ -206,7 +205,7 @@ export default function ArticleExpertiseConseil() {
           ref={(el) => { sectionRefs.current["revelations"] = el; }}
           style={{ backgroundColor: "#ffffff", padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="sp-medium">
             <div style={{ textAlign: "center", marginBottom: "56px" }}>
               <h2 style={{ fontSize: "28px", fontWeight: 300, color: "#18181b", marginBottom: "12px" }}>
                 Ce qu'un regard externe révèle rapidement
@@ -275,9 +274,9 @@ export default function ArticleExpertiseConseil() {
           ref={(el) => { sectionRefs.current["accelerer"] = el; }}
           style={{ backgroundColor: "#fafafa", padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 40px" }}>
-            <div style={{
-              display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px",
+          <div className="sp-medium">
+            <div className="sp-grid-2" style={{
+              gap: "64px",
               opacity: isVisible("accelerer") ? 1 : 0,
               transform: isVisible("accelerer") ? "translateY(0)" : "translateY(30px)",
               transition: "all 0.8s ease",
@@ -330,8 +329,8 @@ export default function ArticleExpertiseConseil() {
           ref={(el) => { sectionRefs.current["objectif"] = el; }}
           style={{ backgroundColor: "#18181b", padding: "80px 0" }}
         >
-          <div style={{
-            maxWidth: "720px", margin: "0 auto", padding: "0 40px", textAlign: "center",
+          <div className="sp-narrow" style={{
+            textAlign: "center",
             opacity: isVisible("objectif") ? 1 : 0,
             transform: isVisible("objectif") ? "translateY(0)" : "translateY(20px)",
             transition: "all 0.8s ease",
@@ -355,7 +354,7 @@ export default function ArticleExpertiseConseil() {
               Une mission réussie laisse :
             </p>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", backgroundColor: "#27272a" }}>
+            <div className="sp-grid-3" style={{ gap: "1px", backgroundColor: "#27272a" }}>
               {resultats.map((item, i) => (
                 <div
                   key={i}
@@ -392,14 +391,14 @@ export default function ArticleExpertiseConseil() {
 
         {/* CTA */}
         <section style={{ backgroundColor: "#fafafa", padding: "80px 0" }}>
-          <div style={{ maxWidth: "720px", margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
+          <div className="sp-narrow" style={{ textAlign: "center" }}>
             <h2 style={{ fontSize: "26px", fontWeight: 300, color: "#18181b", marginBottom: "24px" }}>
               Prêt à accélérer votre transformation ?
             </h2>
             <p style={{ fontSize: "15px", lineHeight: 1.7, color: "#71717a", marginBottom: "40px" }}>
               Échangeons sur vos enjeux stratégiques et définissons ensemble les priorités d'action.
             </p>
-            <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
+            <div className="sp-cta-row">
               <Link
                 href="/contact"
                 className="btn-hover"

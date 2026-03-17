@@ -9,7 +9,7 @@ export default function ContactPage() {
     >
       {/* Contact options */}
       <section style={{ padding: "64px 0", borderBottom: "1px solid #f4f4f5" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
+        <div className="sp-grid-2" style={{ gap: "32px" }}>
           {/* Devis */}
           <div style={{ padding: "48px", backgroundColor: "#fafafa", border: "1px solid #f4f4f5" }}>
             <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#a1a1aa", marginBottom: "16px" }}>
@@ -94,13 +94,13 @@ export default function ContactPage() {
 
       {/* Coordinates */}
       <section style={{ padding: "64px 0", borderBottom: "1px solid #f4f4f5" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "64px", alignItems: "start" }}>
+        <div className="sp-grid-sidebar" style={{ gap: "64px", alignItems: "start" }}>
           <div>
             <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#a1a1aa" }}>
               Coordonnées
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px" }}>
+          <div className="sp-grid-2" style={{ gap: "48px" }}>
             <div>
               <h3 style={{ fontSize: "16px", fontWeight: 500, color: "#18181b", marginBottom: "12px" }}>Email</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
@@ -144,7 +144,7 @@ export default function ContactPage() {
 
       {/* Process */}
       <section style={{ padding: "64px 0" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "64px", alignItems: "start" }}>
+        <div className="sp-grid-sidebar" style={{ gap: "64px", alignItems: "start" }}>
           <div>
             <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#a1a1aa" }}>
               Comment ça se passe

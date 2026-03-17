@@ -93,7 +93,7 @@ export default function ArticleIAGenerative() {
           }} />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.15) 100%)" }} />
 
-          <div className="animate-slideUp" style={{ position: "relative", zIndex: 2, maxWidth: "1400px", width: "100%", margin: "0 auto", padding: "0 40px 80px" }}>
+          <div className="animate-slideUp site-container" style={{ position: "relative", zIndex: 2, width: "100%", paddingBottom: "80px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
               <span style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)" }}>
                 Intelligence artificielle
@@ -115,8 +115,7 @@ export default function ArticleIAGenerative() {
           ref={(el) => { sectionRefs.current["intro-ia"] = el; }}
           style={{ backgroundColor: "#ffffff", padding: "80px 0" }}
         >
-          <div style={{
-            maxWidth: "720px", margin: "0 auto", padding: "0 40px",
+          <div className="sp-narrow" style={{
             opacity: isVisible("intro-ia") ? 1 : 0,
             transform: isVisible("intro-ia") ? "translateY(0)" : "translateY(30px)",
             transition: "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
@@ -138,7 +137,7 @@ export default function ArticleIAGenerative() {
           ref={(el) => { sectionRefs.current["stats-ia"] = el; }}
           style={{ backgroundColor: "#09090b", padding: "80px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "#52525b", marginBottom: "16px", textAlign: "center" }}>
               Un avantage compétitif
             </p>
@@ -146,8 +145,8 @@ export default function ArticleIAGenerative() {
               Des gains immédiats et mesurables
             </h2>
 
-            <div style={{
-              display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", backgroundColor: "#27272a",
+            <div className="sp-grid-3" style={{
+              gap: "1px", backgroundColor: "#27272a",
               opacity: isVisible("stats-ia") ? 1 : 0,
               transform: isVisible("stats-ia") ? "translateY(0)" : "translateY(20px)",
               transition: "all 0.8s ease 0.2s",
@@ -184,7 +183,7 @@ export default function ArticleIAGenerative() {
           ref={(el) => { sectionRefs.current["applications"] = el; }}
           style={{ backgroundColor: "#ffffff", padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <div style={{ textAlign: "center", marginBottom: "64px" }}>
               <h2 style={{ fontSize: "30px", fontWeight: 300, color: "#18181b", marginBottom: "12px" }}>
                 Applications concrètes pour votre entreprise
@@ -196,8 +195,9 @@ export default function ArticleIAGenerative() {
               {applications.map((app, i) => (
                 <div
                   key={i}
+                  className="sp-grid-2"
                   style={{
-                    display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", alignItems: "center",
+                    gap: "64px", alignItems: "center",
                     padding: "48px 0",
                     borderBottom: i < applications.length - 1 ? "1px solid #e4e4e7" : "none",
                     opacity: isVisible("applications") ? 1 : 0,
@@ -267,7 +267,7 @@ export default function ArticleIAGenerative() {
           ref={(el) => { sectionRefs.current["difference"] = el; }}
           style={{ backgroundColor: "#fafafa", padding: "80px 0" }}
         >
-          <div style={{ maxWidth: "720px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="sp-narrow">
             <h2 style={{
               fontSize: "28px", fontWeight: 300, color: "#18181b", marginBottom: "40px",
               opacity: isVisible("difference") ? 1 : 0,
@@ -317,8 +317,8 @@ export default function ArticleIAGenerative() {
           ref={(el) => { sectionRefs.current["approche-ia"] = el; }}
           style={{ backgroundColor: "#18181b", padding: "80px 0" }}
         >
-          <div style={{
-            maxWidth: "720px", margin: "0 auto", padding: "0 40px", textAlign: "center",
+          <div className="sp-narrow" style={{
+            textAlign: "center",
             opacity: isVisible("approche-ia") ? 1 : 0,
             transform: isVisible("approche-ia") ? "translateY(0)" : "translateY(20px)",
             transition: "all 0.8s ease",
@@ -353,14 +353,14 @@ export default function ArticleIAGenerative() {
 
         {/* CTA */}
         <section style={{ backgroundColor: "#fafafa", padding: "80px 0" }}>
-          <div style={{ maxWidth: "720px", margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
+          <div className="sp-narrow" style={{ textAlign: "center" }}>
             <h2 style={{ fontSize: "26px", fontWeight: 300, color: "#18181b", marginBottom: "24px" }}>
               Intégrez l'IA dans votre stratégie
             </h2>
             <p style={{ fontSize: "15px", lineHeight: 1.7, color: "#71717a", marginBottom: "40px" }}>
               Découvrez comment l'IA générative peut transformer concrètement votre activité.
             </p>
-            <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
+            <div className="sp-cta-row">
               <Link
                 href="/contact"
                 className="btn-hover"

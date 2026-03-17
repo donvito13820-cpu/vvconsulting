@@ -125,8 +125,8 @@ export default function Home() {
       <main>
         {/* HERO */}
         <section style={{ position: "relative", height: "100vh", minHeight: "600px", overflow: "hidden" }}>
-          <div style={{ position: "absolute", inset: 0, backgroundImage: "url(/hero.png)", backgroundSize: "cover", backgroundPosition: "center 60%" }} />
-          <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }} />
+          <div className="home-hero-bg" style={{ position: "absolute", inset: 0, backgroundImage: "url(/hero.png)", backgroundSize: "cover", backgroundPosition: "center 60%" }} />
+          <div className="home-hero-overlay" style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.35)" }} />
 
           {/* Texte haut gauche */}
           <Reveal x={0} y={36} style={{ position: "relative", paddingTop: "140px" }}>

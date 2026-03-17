@@ -65,11 +65,11 @@ export default function EnqueteQuantitativePage() {
           >
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6))" }} />
             <div style={{ position: "relative", height: "100%", display: "flex", alignItems: "flex-end", paddingBottom: "60px" }}>
-              <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px", width: "100%" }}>
+              <div className="site-container" style={{ width: "100%" }}>
                 <p className="animate-slideUp" style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", marginBottom: "16px" }}>
                   Nos prestations
                 </p>
-                <h1 className="animate-slideUp" style={{ fontSize: "48px", fontWeight: 300, color: "#ffffff", maxWidth: "700px", lineHeight: 1.2, animationDelay: "0.1s" }}>
+                <h1 className="animate-slideUp sp-hero-title" style={{ fontSize: "48px", fontWeight: 300, color: "#ffffff", maxWidth: "700px", lineHeight: 1.2, animationDelay: "0.1s" }}>
                   Enquête quantitative
                 </h1>
               </div>
@@ -83,8 +83,8 @@ export default function EnqueteQuantitativePage() {
           ref={(el) => { sectionRefs.current["intro"] = el; }}
           style={{ padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
+          <div className="site-container">
+            <div className="sp-grid-2" style={{ gap: "80px", alignItems: "center" }}>
               <div style={{ opacity: isVisible("intro") ? 1 : 0, transform: isVisible("intro") ? "translateX(0)" : "translateX(80px)", transition: "opacity 0.8s ease, transform 0.8s ease" }}>
                 <h2 style={{ fontSize: "28px", fontWeight: 300, color: "#18181b", lineHeight: 1.4, marginBottom: "24px" }}>
                   Mesurez, comprenez, décidez avec des données solides
@@ -118,7 +118,7 @@ export default function EnqueteQuantitativePage() {
           ref={(el) => { sectionRefs.current["process"] = el; }}
           style={{ backgroundColor: "#fafafa", padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <div style={{ textAlign: "center", marginBottom: "64px" }}>
               <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "#a1a1aa", marginBottom: "16px" }}>
                 Méthodologie
@@ -126,7 +126,7 @@ export default function EnqueteQuantitativePage() {
               <h2 style={{ fontSize: "32px", fontWeight: 300, color: "#18181b" }}>Notre processus</h2>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
+            <div className="sp-grid-3" style={{ gap: "24px" }}>
               {features.map((feature, i) => (
                 <div
                   key={i}
@@ -188,8 +188,8 @@ export default function EnqueteQuantitativePage() {
           ref={(el) => { sectionRefs.current["benefits"] = el; }}
           style={{ padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "80px", alignItems: "start" }}>
+          <div className="site-container">
+            <div className="sp-grid-sidebar" style={{ gap: "80px", alignItems: "start" }}>
               <div style={{ position: "sticky", top: "120px", opacity: isVisible("benefits") ? 1 : 0, transform: isVisible("benefits") ? "translateX(0)" : "translateX(80px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}>
                 <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "#a1a1aa", marginBottom: "16px" }}>
                   Avantages
@@ -230,8 +230,8 @@ export default function EnqueteQuantitativePage() {
 
         {/* CTA */}
         <section style={{ backgroundColor: "#18181b", padding: "100px 0" }}>
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
-            <h2 style={{ fontSize: "36px", fontWeight: 300, color: "#ffffff", marginBottom: "24px" }}>
+          <div className="site-container" style={{ textAlign: "center" }}>
+            <h2 className="sp-cta-title" style={{ fontSize: "36px", fontWeight: 300, color: "#ffffff", marginBottom: "24px" }}>
               Lancez votre étude quantitative
             </h2>
             <p style={{ fontSize: "16px", color: "#a1a1aa", maxWidth: "500px", margin: "0 auto 40px", lineHeight: 1.7 }}>

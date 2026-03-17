@@ -62,11 +62,11 @@ export default function QuiSommesNousPage() {
           >
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6))" }} />
             <div style={{ position: "relative", height: "100%", display: "flex", alignItems: "flex-end", paddingBottom: "60px" }}>
-              <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px", width: "100%" }}>
+              <div className="site-container" style={{ width: "100%" }}>
                 <p className="animate-slideUp" style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", marginBottom: "16px" }}>
                   Notre identité
                 </p>
-                <h1 className="animate-slideUp" style={{ fontSize: "48px", fontWeight: 300, color: "#ffffff", maxWidth: "600px", lineHeight: 1.2, animationDelay: "0.1s" }}>
+                <h1 className="animate-slideUp sp-hero-title" style={{ fontSize: "48px", fontWeight: 300, color: "#ffffff", maxWidth: "600px", lineHeight: 1.2, animationDelay: "0.1s" }}>
                   Qui sommes-nous ?
                 </h1>
               </div>
@@ -80,8 +80,8 @@ export default function QuiSommesNousPage() {
           ref={(el) => { sectionRefs.current["intro"] = el; }}
           style={{ padding: "100px 0", borderBottom: "1px solid #f4f4f5" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: "80px", alignItems: "center" }}>
+          <div className="site-container">
+            <div className="sp-grid-asym" style={{ gap: "80px", alignItems: "center" }}>
               <div
                 style={{
                   opacity: isVisible("intro") ? 1 : 0,
@@ -123,7 +123,7 @@ export default function QuiSommesNousPage() {
           ref={(el) => { sectionRefs.current["values"] = el; }}
           style={{ padding: "100px 0", backgroundColor: "#fafafa" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <div style={{ textAlign: "center", marginBottom: "64px" }}>
               <p
                 style={{
@@ -155,7 +155,7 @@ export default function QuiSommesNousPage() {
               </h2>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "24px" }}>
+            <div className="sp-grid-4" style={{ gap: "24px" }}>
               {values.map((value, i) => (
                 <div
                   key={i}
@@ -216,7 +216,7 @@ export default function QuiSommesNousPage() {
           ref={(el) => { sectionRefs.current["team"] = el; }}
           style={{ padding: "100px 0" }}
         >
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px" }}>
+          <div className="site-container">
             <div style={{ marginBottom: "64px" }}>
               <p
                 style={{
@@ -248,7 +248,7 @@ export default function QuiSommesNousPage() {
               </h2>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "48px", maxWidth: "700px", margin: "0 auto" }}>
+            <div className="sp-grid-2" style={{ gap: "48px", maxWidth: "700px", margin: "0 auto" }}>
               {team.map((member, i) => (
                 <div
                   key={i}
@@ -289,14 +289,14 @@ export default function QuiSommesNousPage() {
 
         {/* CTA */}
         <section style={{ backgroundColor: "#18181b", padding: "100px 0" }}>
-          <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
-            <h2 style={{ fontSize: "36px", fontWeight: 300, color: "#ffffff", marginBottom: "24px" }}>
+          <div className="site-container" style={{ textAlign: "center" }}>
+            <h2 className="sp-cta-title" style={{ fontSize: "36px", fontWeight: 300, color: "#ffffff", marginBottom: "24px" }}>
               Travaillons ensemble
             </h2>
             <p style={{ fontSize: "16px", color: "#a1a1aa", maxWidth: "500px", margin: "0 auto 40px", lineHeight: 1.7 }}>
               Découvrez comment notre équipe peut accompagner votre transformation.
             </p>
-            <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+            <div className="sp-cta-row">
               <Link
                 href="/contact"
                 className="btn-hover"

@@ -14,7 +14,7 @@ export default function PourquoiNousPage() {
     >
       {/* Expertise */}
       <section style={{ padding: "64px 0", borderBottom: "1px solid #f4f4f5" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "64px", alignItems: "start" }}>
+        <div className="sp-grid-sidebar" style={{ gap: "64px", alignItems: "start" }}>
           <div>
             <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#a1a1aa" }}>
               Expertise
@@ -33,7 +33,7 @@ export default function PourquoiNousPage() {
         <p style={{ fontSize: "11px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#a1a1aa", marginBottom: "32px" }}>
           Nos atouts
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px" }}>
+        <div className="sp-grid-2" style={{ gap: "48px" }}>
           {[
             { num: "01", title: "Approche sur mesure", desc: "Chaque mission est unique. Nous concevons des solutions personnalisées qui s'intègrent à votre environnement." },
             { num: "02", title: "Résultats mesurables", desc: "Nous définissons des indicateurs de performance clairs et assurons un suivi rigoureux des résultats." },
@@ -53,7 +53,7 @@ export default function PourquoiNousPage() {
 
       {/* Quality with image */}
       <section style={{ padding: "64px 0" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", alignItems: "center" }}>
+        <div className="sp-grid-2" style={{ gap: "64px", alignItems: "center" }}>
           <div
             style={{
               height: "350px",

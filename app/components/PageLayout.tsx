@@ -47,6 +47,7 @@ export default function PageLayout({ title, subtitle, heroImage, children }: Pag
             <div style={{ maxWidth: "1152px", margin: "0 auto", padding: "0 24px", width: "100%" }}>
               <Reveal x={0} y={24}>
                 <h1
+                  className="sp-hero-title"
                   style={{
                     fontSize: "42px",
                     fontWeight: 300,
@@ -86,6 +87,7 @@ export default function PageLayout({ title, subtitle, heroImage, children }: Pag
           <div style={{ maxWidth: "1152px", margin: "0 auto", padding: "0 24px" }}>
             <Reveal x={0} y={20}>
               <h1
+                className="sp-hero-title"
                 style={{
                   fontSize: "38px",
                   fontWeight: 300,
