@@ -16,7 +16,7 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
 });
 
-const siteUrl = "https://vvconsulting.fr";
+const siteUrl = "https://vv-agence-consulting.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -65,7 +65,7 @@ const jsonLd = {
   description:
     "Agence de consulting & automatisation. Conseil stratégique, solutions IA, automatisation des processus et études quantitatives & qualitatives.",
   url: siteUrl,
-  logo: `${siteUrl}/logo.png`,
+  logo: `${siteUrl}/logo.svg`,
   contactPoint: [
     { "@type": "ContactPoint", telephone: "+33-6-73-83-75-75", email: "vito.ferrandis@edhec.com", contactType: "customer service", areaServed: "FR", availableLanguage: "French" },
     { "@type": "ContactPoint", telephone: "+33-6-46-87-75-15", email: "victor.casen@edhec.com", contactType: "customer service", areaServed: "FR", availableLanguage: "French" },

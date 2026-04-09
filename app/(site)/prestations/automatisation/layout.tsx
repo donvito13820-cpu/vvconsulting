@@ -11,6 +11,39 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Automatisation des processus métier",
+  description:
+    "Automatisation des processus finance, RH, commercial et opérations. Réduction des tâches répétitives, élimination des erreurs humaines et gain de productivité de 20 à 50%.",
+  url: "https://vv-agence-consulting.com/prestations/automatisation",
+  serviceType: "Automatisation des processus",
+  areaServed: { "@type": "Country", name: "France" },
+  provider: {
+    "@type": "ProfessionalService",
+    name: "VV Consulting",
+    url: "https://vv-agence-consulting.com",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Solutions d'automatisation",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Automatisation de la facturation et des relances" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Automatisation commerciale et CRM" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Automatisation de l'organisation interne" } },
+    ],
+  },
+};
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

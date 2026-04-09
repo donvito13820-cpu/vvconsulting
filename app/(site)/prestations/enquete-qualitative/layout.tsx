@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Enquête qualitative — Comprendre les motivations profondes",
+  description:
+    "Exploration qualitative en profondeur : entretiens individuels, focus groups, études ethnographiques pour comprendre les motivations et perceptions de vos cibles.",
+  url: "https://vv-agence-consulting.com/prestations/enquete-qualitative",
+  serviceType: "Étude qualitative",
+  areaServed: { "@type": "Country", name: "France" },
+  provider: {
+    "@type": "ProfessionalService",
+    name: "VV Consulting",
+    url: "https://vv-agence-consulting.com",
+  },
+};
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

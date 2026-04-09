@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Enquête quantitative — Études statistiques sur mesure",
+  description:
+    "Collecte de données chiffrées fiables : conception de questionnaires, échantillons représentatifs, analyses statistiques avancées et restitution actionnables.",
+  url: "https://vv-agence-consulting.com/prestations/enquete-quantitative",
+  serviceType: "Étude quantitative",
+  areaServed: { "@type": "Country", name: "France" },
+  provider: {
+    "@type": "ProfessionalService",
+    name: "VV Consulting",
+    url: "https://vv-agence-consulting.com",
+  },
+};
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 }
