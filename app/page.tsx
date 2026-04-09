@@ -132,7 +132,7 @@ export default function Home() {
           <Reveal x={0} y={36} style={{ position: "relative", paddingTop: "140px" }}>
             <div className="site-container">
               <h1 style={{ fontSize: "15px", lineHeight: 1.7, color: "rgba(255,255,255,0.9)", fontWeight: 300, maxWidth: "420px", margin: 0 }}>
-                Agence de consulting &amp; automatisation.
+                Cabinet de conseil en IA &amp; automatisation de processus en France.
                 <br />
                 Des systèmes clairs, performants et durables.
               </h1>

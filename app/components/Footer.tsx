@@ -185,12 +185,12 @@ export default function Footer() {
           </p>
           <div style={{ display: "flex", gap: "32px" }}>
             <HoverScale scale={1.03} y={-1}>
-              <Link href="#" style={{ fontSize: "12px", color: "#52525b", textDecoration: "none" }}>
+              <Link href="/mentions-legales" style={{ fontSize: "12px", color: "#52525b", textDecoration: "none" }}>
                 Mentions légales
               </Link>
             </HoverScale>
             <HoverScale scale={1.03} y={-1}>
-              <Link href="#" style={{ fontSize: "12px", color: "#52525b", textDecoration: "none" }}>
+              <Link href="/confidentialite" style={{ fontSize: "12px", color: "#52525b", textDecoration: "none" }}>
                 Confidentialité
               </Link>
             </HoverScale>

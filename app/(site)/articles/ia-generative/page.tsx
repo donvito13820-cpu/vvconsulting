@@ -102,6 +102,10 @@ export default function ArticleIAGenerative() {
               <span style={{ fontSize: "11px", fontWeight: 400, color: "rgba(255,255,255,0.5)" }}>
                 7 min de lecture
               </span>
+              <span style={{ width: "40px", height: "1px", backgroundColor: "rgba(255,255,255,0.3)" }} />
+              <time dateTime="2026-02-01" style={{ fontSize: "11px", fontWeight: 400, color: "rgba(255,255,255,0.5)" }}>
+                Février 2026
+              </time>
             </div>
             <h1 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 300, color: "#ffffff", lineHeight: 1.2, maxWidth: "800px" }}>
               IA générative : opportunités concrètes et rentables pour les PME
@@ -373,17 +377,17 @@ export default function ArticleIAGenerative() {
                 Demander un devis
               </Link>
               <Link
-                href="/"
+                href="/prestations/solution-ia"
                 style={{
                   display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px",
                   height: "50px", padding: "0 36px", border: "1px solid #d4d4d8", color: "#18181b",
                   fontSize: "11px", fontWeight: 500, letterSpacing: "0.18em", textTransform: "uppercase", textDecoration: "none",
                 }}
               >
+                Nos solutions IA
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M19 12H5M12 19l-7-7 7-7" />
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-                Retour
               </Link>
             </div>
           </div>
