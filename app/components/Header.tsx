@@ -6,19 +6,18 @@ import { motion, AnimatePresence } from "motion/react";
 
 const navigation = [
   {
-    label: "Nos prestations",
+    label: "Nos services",
     items: [
-      { name: "Enquête quantitative", href: "/prestations/enquete-quantitative" },
-      { name: "Enquête qualitative", href: "/prestations/enquete-qualitative" },
-      { name: "Solution IA", href: "/prestations/solution-ia" },
-      { name: "Automatisation", href: "/prestations/automatisation" },
+      { name: "Missions sur Mesure", href: "/missions-sur-mesure" },
+      { name: "Solutions SaaS", href: "/solutions-saas" },
+      { name: "Conseil RSE", href: "/conseil-rse" },
     ],
   },
   {
-    label: "Notre structure",
+    label: "À propos",
     items: [
-      { name: "Qui sommes-nous", href: "/accueil/qui-sommes-nous" },
-      { name: "Notre approche", href: "/accueil/notre-approche" },
+      { name: "Notre vision & valeurs", href: "/a-propos" },
+      { name: "Contact", href: "/contact" },
     ],
   },
 ];

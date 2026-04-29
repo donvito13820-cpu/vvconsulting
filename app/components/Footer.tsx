@@ -9,19 +9,18 @@ import HoverScale from "@/app/components/motion/HoverScale";
 
 const links = [
   {
-    title: "Prestations",
+    title: "Services",
     items: [
-      { name: "Enquête quantitative", href: "/prestations/enquete-quantitative" },
-      { name: "Enquête qualitative", href: "/prestations/enquete-qualitative" },
-      { name: "Solution IA", href: "/prestations/solution-ia" },
-      { name: "Automatisation", href: "/prestations/automatisation" },
+      { name: "Missions sur Mesure", href: "/missions-sur-mesure" },
+      { name: "Solutions SaaS", href: "/solutions-saas" },
+      { name: "Conseil RSE", href: "/conseil-rse" },
     ],
   },
   {
-    title: "Structure",
+    title: "Agence",
     items: [
-      { name: "Qui sommes-nous", href: "/accueil/qui-sommes-nous" },
-      { name: "Notre approche", href: "/accueil/notre-approche" },
+      { name: "À propos", href: "/a-propos" },
+      { name: "Contact", href: "/contact" },
     ],
   },
 ];
@@ -116,12 +115,12 @@ export default function Footer() {
                     color: "#ffffff",
                   }}
                 >
-                  VV Consulting
+                  VV Agence Consulting
                 </span>
               </Link>
             </HoverScale>
             <p style={{ fontSize: "14px", lineHeight: 1.7, color: "#71717a", maxWidth: "300px", marginBottom: "24px" }}>
-              Agence de consulting &amp; automatisation. Nous transformons vos processus pour libérer votre potentiel.
+              Cabinet de conseil digital, solutions SaaS et RSE. Nous accompagnons les entreprises qui veulent des résultats concrets.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
               <a href="mailto:vito.ferrandis@edhec.com" style={{ fontSize: "13px", color: "#a1a1aa", textDecoration: "none" }}>
@@ -181,7 +180,7 @@ export default function Footer() {
       <div style={{ borderTop: "1px solid #27272a" }} data-footer-reveal>
         <div className="site-container footer-bottom-bar" style={{ paddingBlock: "24px" }}>
           <p style={{ fontSize: "12px", color: "#52525b" }}>
-            © {new Date().getFullYear()} VV Consulting. Tous droits réservés.
+            © {new Date().getFullYear()} VV Agence Consulting. Tous droits réservés.
           </p>
           <div style={{ display: "flex", gap: "32px" }}>
             <HoverScale scale={1.03} y={-1}>

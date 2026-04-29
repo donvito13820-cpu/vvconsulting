@@ -21,35 +21,37 @@ const siteUrl = "https://vv-agence-consulting.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "VV Consulting | Conseil stratégique & automatisation pour entreprises",
-    template: "%s | VV Consulting",
+    default: "VV Agence Consulting — Stratégie, Innovation & RSE",
+    template: "%s | VV Agence Consulting",
   },
   description:
-    "VV Consulting accompagne les entreprises dans leur transformation : conseil stratégique, automatisation des processus, solutions IA et études quantitatives & qualitatives.",
+    "Cabinet de conseil digital, solutions SaaS et RSE pour entreprises ambitieuses. Missions sur mesure, intégration IA et développement durable. Discutons de votre projet.",
   keywords: [
-    "consulting", "conseil stratégique", "automatisation", "intelligence artificielle",
-    "transformation digitale", "enquête quantitative", "enquête qualitative",
-    "solution IA", "VV Consulting", "conseil entreprise",
+    "agence consulting", "conseil digital", "missions sur mesure", "solutions SaaS",
+    "conseil RSE", "intégration IA", "automatisation", "développement durable",
+    "stratégie entreprise", "transformation digitale", "VV Agence Consulting",
   ],
-  authors: [{ name: "VV Consulting" }],
-  creator: "VV Consulting",
-  publisher: "VV Consulting",
+  authors: [{ name: "VV Agence Consulting" }],
+  creator: "VV Agence Consulting",
+  publisher: "VV Agence Consulting",
   formatDetection: { telephone: true, email: true },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "VV Consulting",
-    title: "VV Consulting | Conseil stratégique & automatisation pour entreprises",
+    siteName: "VV Agence Consulting",
+    title: "VV Agence Consulting — Stratégie, Innovation & RSE",
     description:
-      "Agence de consulting & automatisation. Du diagnostic stratégique à l'implémentation opérationnelle, nous transformons vos processus pour libérer votre potentiel.",
+      "Cabinet de conseil digital, solutions SaaS et RSE. Missions sur mesure, intégration IA et stratégie développement durable pour entreprises ambitieuses.",
     url: siteUrl,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "VV Agence Consulting" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "VV Consulting | Conseil stratégique & automatisation",
+    title: "VV Agence Consulting — Stratégie, Innovation & RSE",
     description:
-      "Agence de consulting & automatisation. Nous accompagnons les entreprises dans leur transformation digitale.",
+      "Cabinet de conseil digital, solutions SaaS et RSE. Missions sur mesure, intégration IA et développement durable.",
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -61,31 +63,60 @@ export const metadata: Metadata = {
   },
 };
 
+const BASE_URL = siteUrl;
+
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "VV Consulting",
-  description:
-    "Agence de consulting & automatisation. Conseil stratégique, solutions IA, automatisation des processus et études quantitatives & qualitatives.",
-  url: siteUrl,
-  logo: `${siteUrl}/logo.svg`,
-  contactPoint: [
-    { "@type": "ContactPoint", telephone: "+33-6-73-83-75-75", email: "vito.ferrandis@edhec.com", contactType: "customer service", areaServed: "FR", availableLanguage: "French" },
-    { "@type": "ContactPoint", telephone: "+33-6-46-87-75-15", email: "victor.casen@edhec.com", contactType: "customer service", areaServed: "FR", availableLanguage: "French" },
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": `${BASE_URL}/#organization`,
+      name: "VV Agence Consulting",
+      description:
+        "Cabinet de conseil digital, solutions SaaS et RSE. Missions sur mesure, intégration IA et stratégie développement durable pour entreprises ambitieuses.",
+      url: BASE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/logo.svg`,
+        width: 200,
+        height: 60,
+      },
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+33-6-73-83-75-75",
+          email: "vito.ferrandis@edhec.com",
+          contactType: "customer service",
+          areaServed: "FR",
+          availableLanguage: "French",
+        },
+        {
+          "@type": "ContactPoint",
+          telephone: "+33-6-46-87-75-15",
+          email: "victor.casen@edhec.com",
+          contactType: "customer service",
+          areaServed: "FR",
+          availableLanguage: "French",
+        },
+      ],
+      founder: [
+        { "@type": "Person", name: "Victor", jobTitle: "Co-fondateur, Responsable Marketing & Consultant" },
+        { "@type": "Person", name: "Vito", jobTitle: "Co-fondateur, Développeur & Consultant" },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Services VV Agence Consulting",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Missions sur mesure — Conseil digital & IA", url: `${BASE_URL}/missions-sur-mesure` } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Solutions SaaS — Gestion des avis clients", url: `${BASE_URL}/solutions-saas` } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Conseil RSE & Stratégie développement durable", url: `${BASE_URL}/conseil-rse` } },
+        ],
+      },
+      areaServed: { "@type": "Country", name: "France" },
+      knowsLanguage: "fr",
+      sameAs: [],
+    },
   ],
-  founder: [
-    { "@type": "Person", name: "Victor Casen", jobTitle: "Co-fondateur, Responsable Marketing & Consultant" },
-    { "@type": "Person", name: "Vito Ferrandis", jobTitle: "Co-fondateur, Développeur & Consultant" },
-  ],
-  serviceType: [
-    "Conseil stratégique",
-    "Automatisation des processus",
-    "Solutions Intelligence Artificielle",
-    "Enquêtes quantitatives",
-    "Enquêtes qualitatives",
-  ],
-  areaServed: { "@type": "Country", name: "France" },
-  knowsLanguage: "fr",
 };
 
 export default function RootLayout({
